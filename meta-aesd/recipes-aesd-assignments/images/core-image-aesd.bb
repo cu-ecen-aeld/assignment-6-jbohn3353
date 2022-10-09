@@ -1,5 +1,5 @@
 inherit core-image
-#CORE_IMAGE_EXTRA_INSTALL += "aesd-assignments"
+CORE_IMAGE_EXTRA_INSTALL += "aesd-assignments"
 CORE_IMAGE_EXTRA_INSTALL += "openssh"
 inherit extrausers
 # See https://docs.yoctoproject.org/singleindex.html#extrausers-bbclass
@@ -8,5 +8,5 @@ inherit extrausers
 # PASSWD below is set to the output of
 # printf "%q" $(mkpasswd -m sha256crypt root) to hash the "root" password
 # string
-PASSWD = "\$5\$2WoxjAdaC2\$l4aj6Is.EWkD72Vt.byhM5qRtF9HcCM/5YpbxpmvNB5"
+PASSWD = "\$5\$2tvA3V9PyePYbzNq\$mBDBUdvC/4.k49T6zAJxcqy.itp8xklY3tBQLCCtOPA"
 EXTRA_USERS_PARAMS = "usermod -p '${PASSWD}' root;"

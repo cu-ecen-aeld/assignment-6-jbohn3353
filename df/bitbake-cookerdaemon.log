@@ -1,0 +1,22 @@
+1195333 12:54:17.623929 --- Starting bitbake server pid 1195333 at 2022-10-09 12:54:17.623908 ---
+/usr/lib/python3/dist-packages/apport/report.py:13: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+  import fnmatch, glob, traceback, errno, sys, atexit, locale, imp, stat
+Traceback (most recent call last):
+  File "/home/jabo7506/Documents/a6/poky/bitbake/bin/bitbake-server", line 52, in <module>
+    bb.server.process.execServer(lockfd, readypipeinfd, lockname, sockname, timeout, xmlrpcinterface)
+  File "/home/jabo7506/Documents/a6/poky/bitbake/lib/bb/server/process.py", line 553, in execServer
+    writer.send("r")
+  File "/home/jabo7506/Documents/a6/poky/bitbake/lib/bb/server/process.py", line 766, in send
+    self._send(obj)
+  File "/home/jabo7506/Documents/a6/poky/bitbake/lib/bb/server/process.py", line 744, in _send
+    self.writer.send_bytes(obj)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 205, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 416, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 373, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+sys:1: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/jabo7506/Documents/a6/df/bitbake-cookerdaemon.log' mode='a+' encoding='UTF-8'>
+sys:1: ResourceWarning: unclosed file <_io.FileIO name=3 mode='wb' closefd=True>
+sys:1: ResourceWarning: unclosed <socket.socket fd=6, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>
